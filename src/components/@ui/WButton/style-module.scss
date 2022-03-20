@@ -1,0 +1,19 @@
+.btn {
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  color: inherit;
+  height: var(--btn-height);
+  text-align: left;
+  &.borderGray {
+    border: 1px solid $border-color;
+  }
+}
+.arrowRight {
+  margin-left: 30px;
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+}

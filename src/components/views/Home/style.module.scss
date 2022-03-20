@@ -1,0 +1,12 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 312px 1fr;
+  grid-template-areas: 'sd main';
+  column-gap: 42px;
+}
+.sideBar {
+  grid-area: sd;
+}
+.main {
+  grid-area: main;
+}

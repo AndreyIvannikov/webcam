@@ -1,0 +1,20 @@
+$pink: #ff93cd;
+$inline: #222226;
+$gray: #606074;
+$color-background: #e5e5e5;
+$white: #fefeff;
+$border-color: rgba(196, 196, 205, 0.4);
+$text-color: #606074;
+$separator-color: #E6E6EA;
+:root {
+    --btn-height: 40px
+}
+
+@mixin defaultText {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}

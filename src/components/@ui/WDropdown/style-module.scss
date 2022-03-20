@@ -1,0 +1,29 @@
+.dropdown {
+  position: relative;
+  .title {
+    color: $gray;
+    // margin-bottom: 12px;
+  }
+  &__list {
+    position: absolute;
+    z-index: 3;
+    top: calc(var(--btn-height) + 12px);
+    padding: 28px;
+    background-color: $white;
+    box-shadow: 0px 0px 100px #e1f0f9;
+    border-radius: 8px;
+  }
+  &__item {
+    label {
+      white-space: nowrap;
+      display: block;
+      cursor: pointer;
+    }
+  }
+  &__item.active {
+    color: $pink;
+  }
+  &__item + &__item {
+    margin-top: 28px;
+  }
+}

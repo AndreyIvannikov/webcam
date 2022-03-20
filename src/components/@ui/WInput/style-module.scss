@@ -1,0 +1,27 @@
+.input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid $border-color;
+  height: 40px;
+  border-radius: 37px;
+  padding: 0 3px 0 13px;
+  height: 40px;
+
+  &:focus-within {
+    border: 1px solid $pink;
+  }
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 0 0 8px;
+    &::placeholder {
+      font-size: inherit;
+      color: $gray;
+    }
+  }
+  .iconClose {
+    cursor: pointer;
+  }
+}

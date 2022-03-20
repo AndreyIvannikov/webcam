@@ -1,0 +1,22 @@
+.wrapper {
+  :global(.slider-base) {
+    height: 2px;
+  }
+  :global(.slider-handle) {
+    width: 8px;
+    height: 16px;
+  }
+  :global(.slider-handle.slider-active) {
+    background-color: $pink;
+    box-shadow: none;
+  }
+  :global(.slider-handle.slider-active) {
+    box-shadow: none;
+  }
+  :global(.slider-connect) {
+    background: transparent;
+  }
+  :global(.slider-target.slider-focused) {
+    box-shadow: none;
+  }
+}

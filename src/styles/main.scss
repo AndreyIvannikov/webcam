@@ -1,0 +1,19 @@
+@import './_variables';
+@import './_normalize.scss';
+@import './_font.scss';
+
+body {
+  font-family: MontserratRegular, sans-serif;
+  background-color: $color-background;
+  color: $text-color;
+  @include defaultText;
+}
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
