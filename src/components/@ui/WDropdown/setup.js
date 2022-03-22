@@ -5,8 +5,17 @@ export default {
     dropdownList: {
       type: Array,
     },
+    modelValue: {
+      type: undefined, // объявить какие типы у modelValue
+    },
   },
-  setup({ dropdownList }) {
+  // todo убрать object destruction отсюда
+  setup({ value, dropdownList }, { emit }) {
+    // переделать на proxy
+    const proxy = computed({
+      get: () => value,
+      set: val => emit('update:modelValue', val)
+    })
     const currentItem = ref(dropdownList[0].value)
     const showList = ref(false)
     const dropdownTitle = computed(
@@ -21,6 +30,7 @@ export default {
       () => toggleShowList()
     )
     return {
+      proxy,
       currentItem,
       dropdownTitle,
       toggleShowList,

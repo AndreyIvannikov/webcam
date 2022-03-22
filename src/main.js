@@ -1,14 +1,14 @@
-// import { createApp } from 'vue'
+import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-// import App from './App.vue'
+import App from './App.vue'
 import router from './router'
-import app from './plugins/VueComponents.js'
+import components from './plugins/VueComponents'
 
-// const app = createApp(App)
+const app = createApp(App)
 
 app.use(createPinia())
 app.use(router)
-// app.component('WDropdown', WDropdown)
+app.use(components)
 
 app.mount('#app')
