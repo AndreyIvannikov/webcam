@@ -4,9 +4,7 @@
       <col-left />
     </div>
     <div :class="$style.main">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quam
-      rem. Aliquid optio neque quam maiores, ratione enim non sed, libero ipsum
-      tempore adipisci nulla amet corrupti minima cupiditate atque.
+     test - 22
     </div>
   </div>
 </template>
