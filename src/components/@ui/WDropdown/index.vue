@@ -3,7 +3,7 @@
   <div :class="[$style.dropdown, showList && $style.open]">
     <div :class="$style.title">
       <WButton borderGray iconName="arrow" icon @click="toggleShowList">
-        {{ dropdownTitle }} - 24315
+        {{ dropdownTitle }} - 2
       </WButton>
     </div>
     <Transition
