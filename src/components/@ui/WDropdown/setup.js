@@ -7,7 +7,13 @@ export default {
     },
   
   },
-  setup({ dropdownList }) {
+  // todo убрать object destruction отсюда
+  setup({ value, dropdownList }, { emit }) {
+    // переделать на proxy
+    const proxy = computed({
+      get: () => value,
+      set: val => emit('update:modelValue', val)
+    })
     const currentItem = ref(dropdownList[0].value)
     const showList = ref(false)
     const checked = ref([])
@@ -51,6 +57,7 @@ export default {
       () => toggleShowList()
     )
     return {
+      proxy,
       currentItem,
       dropdownTitle,
       showList,

@@ -2,14 +2,17 @@
   width: 100%;
   display: flex;
   align-items: center;
-  border: 1px solid $border-color;
+  box-shadow: 0 0 0 1px $border-color;
   height: 40px;
   border-radius: 37px;
   padding: 0 3px 0 13px;
   height: 40px;
 
+  &:hover {
+    box-shadow: 0 0 0 1px $pink;
+  }
   &:focus-within {
-    border: 1px solid $pink;
+    box-shadow: 0 0 0 2px $pink;
   }
   input {
     width: 100%;
@@ -24,4 +27,8 @@
   .iconClose {
     cursor: pointer;
   }
+}
+
+.icon {
+  flex-shrink: 0;
 }

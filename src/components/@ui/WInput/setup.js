@@ -8,6 +8,7 @@ export default {
     },
   },
   setup() {
+    // todo тут тоже на computed переделываем
     const input = ref('')
     const clearInput = () => {
       input.value = ''

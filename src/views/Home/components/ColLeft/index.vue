@@ -1,6 +1,10 @@
 <template>
   <div :class="$style.wrapper">
     <div :class="$style.row"><WInput placeholder="Поиск по названию" /></div>
+
+    <h3 style="color: red">
+      добавить курсоры + добавить состояния на ховер и фокус + добавить анимации выпадающим спискам
+    </h3>
     <div :class="[$style.row, $style.dropdownList]">
       <WDropdown :dropdownList="dropdownList1">
         <template #default="{ item }">
@@ -33,6 +37,9 @@
       </WDropdown>
       >
     </div>
+    <h3 style="color: red">
+      стилизовать + добавить значения этих слайдеров по бокам
+    </h3>
     <div :class="$style.row">
       <h4>% выплат</h4>
       <WRangeSlider />
