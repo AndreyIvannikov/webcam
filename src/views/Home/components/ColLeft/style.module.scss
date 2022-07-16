@@ -22,3 +22,9 @@
     }
   }
 }
+.chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px ,1fr));
+  flex-wrap: wrap;
+  gap: 10px;
+}

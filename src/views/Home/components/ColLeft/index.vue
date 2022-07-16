@@ -2,11 +2,36 @@
   <div :class="$style.wrapper">
     <div :class="$style.row"><WInput placeholder="Поиск по названию" /></div>
     <div :class="[$style.row, $style.dropdownList]">
-      <WDropdown :dropdownList="dropdownList1" />
-      <WDropdown :dropdownList="dropdownList2" />
+      <WDropdown :dropdownList="dropdownList1">
+        <template #default="{ item }">
+          <w-checkbox
+            :label="item.title"
+            :value="item.value"
+            v-model="dropdown"
+          />
+        </template>
+      </WDropdown>
+      <WDropdown :dropdownList="dropdownList2">
+        <template #default="{ item }">
+          <w-checkbox
+            :label="item.title"
+            :value="item.value"
+            v-model="dropdown"
+          />
+        </template>
+      </WDropdown>
     </div>
     <div :class="$style.row">
-      <WDropdown :dropdownList="dropdownList" />
+      <WDropdown :dropdownList="dropdownList" v-model="dropdown">
+        <template #default="{ item }">
+          <w-checkbox
+            :label="item.title"
+            :value="item.value"
+            v-model="dropdown"
+          />
+        </template>
+      </WDropdown>
+      >
     </div>
     <div :class="$style.row">
       <h4>% выплат</h4>
@@ -20,15 +45,20 @@
       <h4>% выплат</h4>
       <WRangeSlider />
     </div>
+    <div>
+      <div :class="$style.chips">
+        <WChips :title="item" v-for="item in dropdown" :key="item" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { ref } from '@vue/reactivity'
 export default {
-  components: {},
   setup() {
     const value = ref([20, 40])
+    const checkbox = ref([20, 40])
     const dropdownList = ref([
       { title: 'Только девушки', value: 'woman' },
       { title: 'Только парни', value: 'man' },
@@ -44,11 +74,14 @@ export default {
       { title: 'Район1', value: 'man' },
       { title: 'Район2', value: 'womanMan' },
     ])
+    const dropdown = ref([])
     return {
       dropdownList,
       dropdownList1,
       dropdownList2,
       value,
+      dropdown,
+      checkbox,
     }
   },
 }

@@ -1,20 +1,7 @@
 <template>
   <button :class="[$style.btn, borderGray && $style.borderGray]">
     <slot />
-    <svg
-      v-if="icon"
-      :class="$style.arrowRight"
-      width="10"
-      height="7"
-      viewBox="0 0 10 7"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M10 1.35006L8.58157 0L5 3.40896L1.41843 0L0 1.35006L5 6.10908L10 1.35006Z"
-        fill="#565661"
-      />
-    </svg>
+    <w-icon :iconName="iconName" :class="$style.arrowRight" />
   </button>
 </template>
 

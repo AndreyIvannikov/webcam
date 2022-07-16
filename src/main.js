@@ -1,6 +1,6 @@
 // import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
+const svgs = import.meta.globEager('./assets/img/*.svg')
 // import App from './App.vue'
 import router from './router'
 import app from './plugins/VueComponents.js'

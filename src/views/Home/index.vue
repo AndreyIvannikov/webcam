@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
 import ColLeft from './components/ColLeft/index.vue'
 
 export default {

@@ -3,6 +3,7 @@ $inline: #222226;
 $gray: #606074;
 $color-background: #e5e5e5;
 $white: #fefeff;
+$white-default: #fefeff;
 $border-color: rgba(196, 196, 205, 0.4);
 $text-color: #606074;
 $separator-color: #E6E6EA;
@@ -11,10 +12,10 @@ $separator-color: #E6E6EA;
 }
 
 @mixin defaultText {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 2rem;
   letter-spacing: 0em;
   text-align: left;
 }

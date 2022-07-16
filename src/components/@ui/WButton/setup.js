@@ -5,6 +5,9 @@ export default {
     icon: {
       type: Boolean,
     },
+    iconName: {
+      type: Boolean,
+    },
     borderGray: {
       type: Boolean,
     },
